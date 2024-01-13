@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0o5d7ff6dc1j"]
+
+[ext_resource type="Script" path="res://Scenes/Garfield.gd" id="1_hieic"]
+
+[node name="Garfield" type="Node2D"]
+script = ExtResource("1_hieic")

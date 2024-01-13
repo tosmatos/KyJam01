@@ -1,0 +1,90 @@
+[gd_scene load_steps=2 format=3 uid="uid://db06d51ppipo0"]
+
+[ext_resource type="Texture2D" uid="uid://b4l73tkl2hxw2" path="res://Assets/Placeholders/DALL·E 2024-01-13 15.56.47 - Drawing of a party with people drinking, dancing, style of a marker doodle.png" id="1_m00a6"]
+
+[node name="Test" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -59.0
+offset_right = 1283.0
+offset_bottom = 1079.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_m00a6")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ChoicesPanelContainer" type="PanelContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 362.0
+offset_top = 476.0
+offset_right = 1214.0
+offset_bottom = 656.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/ChoicesPanelContainer"]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="UI/ChoicesPanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/ChoicesPanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="Spacer2" type="Control" parent="UI/ChoicesPanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Button" type="Button" parent="UI/ChoicesPanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button2" type="Button" parent="UI/ChoicesPanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button3" type="Button" parent="UI/ChoicesPanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button4" type="Button" parent="UI/ChoicesPanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Spacer3" type="Control" parent="UI/ChoicesPanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Spacer2" type="Control" parent="UI/ChoicesPanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1

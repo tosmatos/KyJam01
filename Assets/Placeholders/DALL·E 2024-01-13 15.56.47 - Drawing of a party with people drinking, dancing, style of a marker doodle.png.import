@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b4l73tkl2hxw2"
+path="res://.godot/imported/DALL·E 2024-01-13 15.56.47 - Drawing of a party with people drinking, dancing, style of a marker doodle.png-d30c885ee7741d4f2611daa7e6c202ae.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Assets/Placeholders/DALL·E 2024-01-13 15.56.47 - Drawing of a party with people drinking, dancing, style of a marker doodle.png"
+dest_files=["res://.godot/imported/DALL·E 2024-01-13 15.56.47 - Drawing of a party with people drinking, dancing, style of a marker doodle.png-d30c885ee7741d4f2611daa7e6c202ae.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

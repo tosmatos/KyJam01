@@ -18,15 +18,15 @@ func _ready() -> void:
 	
 	first_question.id = 2
 	first_question.text = "So what's your viewpoint on Lasagna?"
-	first_question.answers.append(Answer.new("They're just glorified bolognese pasta!", 3, 5))
-	first_question.answers.append(Answer.new("Pretty good but doesn't even scratch the taste of a Hachis Parmentier.", 3, 5))
+	first_question.answers.append(Answer.new("They're just glorified bolognese pasta!", 3, 5, true))
+	first_question.answers.append(Answer.new("Pretty good but doesn't even scratch the taste of a Hachis Parmentier.", 3, 5, true))
 	first_question.answers.append(Answer.new("My favorite dish!", 4, 15))
 	
 	no_taste.id = 3
 	no_taste.text = """Garfield spends 5 minutes lecturing you on the benefits of lasagna, and explains that you have
 	no taste whatsoever.
 	'And that's why you'll never get any bitches."""
-	no_taste.answers.append(Answer.new("Well I'll keep that in mind, thanks I guess", 0, 5))
+	no_taste.answers.append(Answer.new("Well I'll keep that in mind, thanks I guess", 2, 5))
 	
 	lasagna_bro.id = 4
 	lasagna_bro.text = """His eyes get filled with sparkles. 'You love lasagna too? Finally, someone gets it!'

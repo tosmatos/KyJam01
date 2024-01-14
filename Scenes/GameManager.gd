@@ -32,12 +32,15 @@ func load_next_dialogue(id: int):
 		node.queue_free()
 	
 	for answer in current_dialog.answers:
-		var button = AnswerButton.new()
-		button.answer = answer
-		button.game_manager = self
-		button.text = answer.text
-		button.pressed.connect(load_next_dialogue.bind(button.answer.next_dialog))
-		buttons_container.add_child(button)
-		
-func test(id):
-	print("hello", id)
+		if !answer.used_up:
+			var button = AnswerButton.new()
+			button.answer = answer
+			button.game_manager = self
+			button.text = answer.text
+			button.pressed.connect(load_next_dialogue.bind(button.answer.next_dialog))
+			button.pressed.connect(use_button.bind(button.answer))
+			buttons_container.add_child(button)
+
+func use_button(answer: Answer):
+	if answer.can_be_used_up:
+		answer.used_up = true

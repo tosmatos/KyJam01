@@ -19,10 +19,11 @@ func _ready():
 func _process(delta):
 	pass
 
-func _on_button_pressed():
-	play_audio()
-	
 func play_audio():
 	if (audio_stream != null):
 		audio_stream_player.stream = audio_stream
 		audio_stream_player.play()
+
+func _on_pressed():
+	print("setting used up")
+	answer.used_up = true

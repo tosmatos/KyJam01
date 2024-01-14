@@ -1,6 +1,6 @@
 extends Dialog
 
-var character_dialogue = DialogTree.new()
+var character_dialogue: DialogTree = DialogTree.new()
 
 var intro_dialogue = Dialog.new()
 var first_question = Dialog.new()
@@ -44,6 +44,13 @@ func _ready() -> void:
 	good_bye.text = """You spend a minute exchanging phone numbers.
 	'See you later buddy!'"""
 	good_bye.answers.append(Answer.new("(Leave)", 0, 0))
+	
+	character_dialogue.dialogues.append(intro_dialogue)
+	character_dialogue.dialogues.append(first_question)
+	character_dialogue.dialogues.append(no_taste)
+	character_dialogue.dialogues.append(lasagna_bro)
+	character_dialogue.dialogues.append(fuck_off)
+	character_dialogue.dialogues.append(good_bye)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

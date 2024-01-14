@@ -6,7 +6,10 @@
 
 [node name="Test" type="Node2D"]
 
-[node name="Control" type="Control" parent="."]
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("3_rm8d4")
+
+[node name="Control" type="Control" parent="GameManager"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +17,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="TextureRect" type="TextureRect" parent="GameManager/Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,13 +30,13 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_m00a6")
 
-[node name="UI" type="Control" parent="."]
+[node name="UI" type="Control" parent="GameManager"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ChoicesPanelContainer" type="PanelContainer" parent="UI"]
+[node name="ChoicesPanelContainer" type="PanelContainer" parent="GameManager/UI"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -47,52 +50,57 @@ offset_bottom = 656.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="UI/ChoicesPanelContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="GameManager/UI/ChoicesPanelContainer"]
 layout_mode = 2
 
-[node name="Spacer" type="Control" parent="UI/ChoicesPanelContainer/HBoxContainer"]
+[node name="Spacer" type="Control" parent="GameManager/UI/ChoicesPanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="ButtonsContainer" type="VBoxContainer" parent="UI/ChoicesPanelContainer/HBoxContainer"]
+[node name="ButtonsContainer" type="VBoxContainer" parent="GameManager/UI/ChoicesPanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
 
-[node name="Spacer2" type="Control" parent="UI/ChoicesPanelContainer/HBoxContainer/ButtonsContainer"]
+[node name="Spacer2" type="Control" parent="GameManager/UI/ChoicesPanelContainer/HBoxContainer/ButtonsContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="Button" type="Button" parent="UI/ChoicesPanelContainer/HBoxContainer/ButtonsContainer"]
+[node name="Button" type="Button" parent="GameManager/UI/ChoicesPanelContainer/HBoxContainer/ButtonsContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button2" type="Button" parent="UI/ChoicesPanelContainer/HBoxContainer/ButtonsContainer"]
+[node name="Button2" type="Button" parent="GameManager/UI/ChoicesPanelContainer/HBoxContainer/ButtonsContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button3" type="Button" parent="UI/ChoicesPanelContainer/HBoxContainer/ButtonsContainer"]
+[node name="Button3" type="Button" parent="GameManager/UI/ChoicesPanelContainer/HBoxContainer/ButtonsContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button4" type="Button" parent="UI/ChoicesPanelContainer/HBoxContainer/ButtonsContainer"]
+[node name="Button4" type="Button" parent="GameManager/UI/ChoicesPanelContainer/HBoxContainer/ButtonsContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Spacer3" type="Control" parent="UI/ChoicesPanelContainer/HBoxContainer/ButtonsContainer"]
+[node name="Spacer3" type="Control" parent="GameManager/UI/ChoicesPanelContainer/HBoxContainer/ButtonsContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="Spacer2" type="Control" parent="UI/ChoicesPanelContainer/HBoxContainer"]
+[node name="Spacer2" type="Control" parent="GameManager/UI/ChoicesPanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="Garfield" parent="." instance=ExtResource("2_vswap")]
+[node name="DialoguePanelContainer" type="PanelContainer" parent="GameManager/UI"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DialoguePanel" type="Label" parent="GameManager/UI/DialoguePanelContainer"]
+layout_mode = 2
+
+[node name="Garfield" parent="GameManager" instance=ExtResource("2_vswap")]
 position = Vector2(66, 81)
-
-[node name="GameManager" type="Node" parent="."]
-script = ExtResource("3_rm8d4")

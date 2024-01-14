@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbsuxc076nxbt"]
+
+[ext_resource type="Script" path="res://Scripts/AnswerButton.gd" id="1_ns1w0"]
+
+[node name="AnswerButton" type="Button"]
+script = ExtResource("1_ns1w0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

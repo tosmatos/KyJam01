@@ -26,9 +26,3 @@ func play_audio():
 	if (audio_stream != null):
 		audio_stream_player.stream = audio_stream
 		audio_stream_player.play()
-
-
-func _on_pressed():
-	print("helo")
-	on_pressed.emit(answer.id)
-	emit_signal("answer_selected", answer.next_dialog)

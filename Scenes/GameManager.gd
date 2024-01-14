@@ -14,7 +14,9 @@ func _ready() -> void:
 	garfield = $Garfield
 	dialog_tree = garfield.character_dialogue
 	
-	load_next_dialogue(0)
+	current_dialog = dialog_tree.dialogues[0]
+	
+	load_next_dialogue(1)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,15 +24,20 @@ func _process(delta: float) -> void:
 	pass
 
 func load_next_dialogue(id: int):
-	current_dialog = dialog_tree.dialogues[0]
+	print("Loading dialogue ", id)
+	current_dialog = dialog_tree.GetDialogById(id)
 	dialogue_panel.text = current_dialog.text
+	
+	for node: Node in buttons_container.get_children():
+		node.queue_free()
+	
 	for answer in current_dialog.answers:
 		var button = AnswerButton.new()
 		button.answer = answer
 		button.game_manager = self
 		button.text = answer.text
-		button.pressed.connect(test)
+		button.pressed.connect(load_next_dialogue.bind(button.answer.next_dialog))
 		buttons_container.add_child(button)
 		
 func test(id):
-	print("hello")
+	print("hello", id)

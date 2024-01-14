@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://d0o5d7ff6dc1j"]
+[gd_scene load_steps=3 format=3 uid="uid://d0o5d7ff6dc1j"]
 
 [ext_resource type="Script" path="res://Scenes/Garfield.gd" id="1_hieic"]
+[ext_resource type="Texture2D" uid="uid://cvgn4s3g83yn7" path="res://Assets/Placeholders/GarfieldCharacter.webp" id="2_sajhf"]
 
 [node name="Garfield" type="Node2D"]
 script = ExtResource("1_hieic")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(181.375, 171.813)
+scale = Vector2(0.307861, 0.175314)
+texture = ExtResource("2_sajhf")

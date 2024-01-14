@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://db06d51ppipo0"]
+[gd_scene load_steps=4 format=3 uid="uid://db06d51ppipo0"]
 
 [ext_resource type="Texture2D" uid="uid://b4l73tkl2hxw2" path="res://Assets/Placeholders/DALL·E 2024-01-13 15.56.47 - Drawing of a party with people drinking, dancing, style of a marker doodle.png" id="1_m00a6"]
+[ext_resource type="PackedScene" uid="uid://d0o5d7ff6dc1j" path="res://Scenes/Garfield.tscn" id="2_vswap"]
+[ext_resource type="Script" path="res://Scenes/GameManager.gd" id="3_rm8d4"]
 
 [node name="Test" type="Node2D"]
 
@@ -53,33 +55,33 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/ChoicesPanelContainer/HBoxContainer"]
+[node name="ButtonsContainer" type="VBoxContainer" parent="UI/ChoicesPanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
 
-[node name="Spacer2" type="Control" parent="UI/ChoicesPanelContainer/HBoxContainer/VBoxContainer"]
+[node name="Spacer2" type="Control" parent="UI/ChoicesPanelContainer/HBoxContainer/ButtonsContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="Button" type="Button" parent="UI/ChoicesPanelContainer/HBoxContainer/VBoxContainer"]
+[node name="Button" type="Button" parent="UI/ChoicesPanelContainer/HBoxContainer/ButtonsContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button2" type="Button" parent="UI/ChoicesPanelContainer/HBoxContainer/VBoxContainer"]
+[node name="Button2" type="Button" parent="UI/ChoicesPanelContainer/HBoxContainer/ButtonsContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button3" type="Button" parent="UI/ChoicesPanelContainer/HBoxContainer/VBoxContainer"]
+[node name="Button3" type="Button" parent="UI/ChoicesPanelContainer/HBoxContainer/ButtonsContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button4" type="Button" parent="UI/ChoicesPanelContainer/HBoxContainer/VBoxContainer"]
+[node name="Button4" type="Button" parent="UI/ChoicesPanelContainer/HBoxContainer/ButtonsContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Spacer3" type="Control" parent="UI/ChoicesPanelContainer/HBoxContainer/VBoxContainer"]
+[node name="Spacer3" type="Control" parent="UI/ChoicesPanelContainer/HBoxContainer/ButtonsContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
@@ -88,3 +90,9 @@ size_flags_stretch_ratio = 0.1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
+
+[node name="Garfield" parent="." instance=ExtResource("2_vswap")]
+position = Vector2(66, 81)
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("3_rm8d4")
